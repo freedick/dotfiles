@@ -22,3 +22,5 @@ URxvt*font:		xft:DejaVu Sans Mono:Book:autohint=true:pixelsize=11
 URxvt*boldFont:		xft:DejaVu Sans Mono:Bold:autohint=true:pixelsize=11
 URxvt*scrollstyle:	plain
 URxvt*scrollBar_right:	true
+
+URxvt.perl-ext-common: default,selection-to-clipboard
