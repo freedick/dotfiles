@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files="xinitrc vimrc vim Xresources config"
+files="xinitrc vimrc vim Xresources config/openbox"
 rm -r ./backup
 mkdir ./backup
 
