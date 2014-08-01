@@ -8,3 +8,4 @@ for file in $files; do
 	mv ~/.$file ./backup 
 	ln -s `pwd`/$file ~/.$file
 done
+
