@@ -17,14 +17,19 @@ for i; do
 done
 
 #Remove old backup and back up
-rm -r ./backup
-mkdir ./backup
+if [ -e ./backup ]; then
+	rm -r ./backup/*
+else
+	mkdir ./backup
+fi
 
 files="$vimfiles $xfiles $otherfiles"
 
 #Install dotfiles and backup old files
 for file in $files; do
-	mv ~/.$file ./backup 
+	if[ -e ~/.$file ]; then
+		mv ~/.$file ./backup 
+	fi
 	ln -s `pwd`/$file ~/.$file
 done
 
