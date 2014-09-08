@@ -203,3 +203,6 @@ colors zenburn
 
 " autoload plugins
 call pathogen#infect() 
+
+au BufRead,BufNewFile *.core set filetype=rtfm-core
+au! Syntax rtfm-core source syntax/core.vim
