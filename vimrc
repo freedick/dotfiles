@@ -205,4 +205,4 @@ colors zenburn
 call pathogen#infect() 
 
 au BufRead,BufNewFile *.core set filetype=rtfm-core
-au! Syntax rtfm-core source syntax/core.vim
+au! Syntax rtfm-core source $HOME/.vim/syntax/core.vim
