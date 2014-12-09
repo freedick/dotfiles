@@ -27,7 +27,7 @@ files="$vimfiles $xfiles $otherfiles"
 
 #Install dotfiles and backup old files
 for file in $files; do
-	if[ -e ~/.$file ]; then
+	if [ -e ~/.$file ]; then
 		mv ~/.$file ./backup 
 	fi
 	ln -s `pwd`/$file ~/.$file
