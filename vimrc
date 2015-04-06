@@ -202,4 +202,24 @@ endif
 colors zenburn
 
 " autoload plugins
-call pathogen#infect() 
+call pathogen#infect()
+
+map e :CtrlP <Esc>
+command Suw w !sudo tee %
+" map r map <ctrl-
+
+map <c-s> <c-w>
+noremap <c-w> <c-s><c-l>
+noremap <c-k> <c-s><c-k>
+noremap <c-m> <c-s><c-j>
+noremap <c-j> <c-s><c-h>
+
+noremap J b
+noremap W w
+noremap K 5k
+noremap M 5j
+noremap w l
+noremap m j
+noremap k k
+noremap j h
+
