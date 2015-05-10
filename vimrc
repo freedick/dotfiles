@@ -211,3 +211,4 @@ imap <f12> <esc>:tabn<esc>
 imap <f11> <esc>:tabp<esc>
 map <f12> :tabn<esc>
 map <f11> :tabp<esc>
+command Suw 'w !sudo dd of=%
