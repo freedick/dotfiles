@@ -209,10 +209,6 @@ command Suw w !sudo tee %
 " map r map <ctrl-
 
 map <c-s> <c-w>
-noremap <c-w> <c-s><c-l>
-noremap <c-k> <c-s><c-k>
-noremap <c-m> <c-s><c-j>
-noremap <c-j> <c-s><c-h>
 
 noremap J b
 noremap W w
@@ -222,6 +218,14 @@ noremap w l
 noremap m j
 noremap k k
 noremap j h
+noremap <c-w> :wincmd l<esc>
+noremap <c-k> :wincmd k<esc>
+"noremap <c-m> <esc>:wincmd j<esc>
+noremap <c-j> :wincmd h<esc>
+inoremap <c-w> <esc>:wincmd l<esc>i
+inoremap <c-k> <esc>:wincmd k<esc>i
+"inoremap <c-m> :wincmd j<esc>i
+inoremap <c-j> <esc>:wincmd h<esc>i
 
 
 "au BufRead,BufNewFile *.core set filetype=rtfm-core
@@ -231,4 +235,11 @@ imap <f12> <esc>:tabn<esc>
 imap <f11> <esc>:tabp<esc>
 map <f12> :tabn<esc>
 map <f11> :tabp<esc>
+
+augroup python_files
+	autocmd!
+	autocmd FileType python setlocal noexpandtab
+	autocmd FileType python set tabstop=8
+	autocmd FileType python set shiftwidth=8
+augroup END
 "command Suw 'w !sudo dd of=%
