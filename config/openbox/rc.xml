@@ -177,6 +177,12 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
+    <keybind key="Print">
+      <action name="Execute"><execute>sh ~/dotfiles/screenshot.sh scr</execute></action>
+    </keybind>
+    <keybind key="C-Print">
+      <action name="Execute"><execute>sh ~/dotfiles/screenshot.sh win</execute></action>
+    </keybind>
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
