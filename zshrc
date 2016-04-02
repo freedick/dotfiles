@@ -26,7 +26,7 @@ function get_ps2() {
 }
 function precmd() {
 #echo -n "
-PS1="%{$fg_bold[red]%}$USER%{$reset_color%}@%{$(python ~/dotfiles/colorgen.py %m)%m%{$reset_color%}:%{$fg_bold[magenta]%}$(get_pwd)%{$reset_color%}
+PS1="%{$fg_bold[red]%}$USER%{$reset_color%}@%{$(python ~/dotfiles/colorgen.py $(hostname))%m%{$reset_color%}:%{$fg_bold[magenta]%}$(get_pwd)%{$reset_color%}
 "
 PS2="%{$fg[red]%}$(get_time)"
 PS3="%{$fg_bold[magenta]%}> %{$reset_color%}"
