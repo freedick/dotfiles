@@ -3,7 +3,7 @@
 #Define files
 xfiles="xinitrc Xresources config/openbox"
 vimfiles="vimrc vim"
-otherfiles=""
+otherfiles="zshrc"
 
 #Filter out unwanted files
 for i; do
