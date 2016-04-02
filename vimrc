@@ -235,10 +235,11 @@ imap <f12> <esc>:tabn<esc>
 imap <f11> <esc>:tabp<esc>
 map <f12> :tabn<esc>
 map <f11> :tabp<esc>
-
+set tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
 augroup python_files
 	autocmd!
 	autocmd FileType python setlocal noexpandtab
+	autocmd FileType python set noexpandtab
 	autocmd FileType python set tabstop=8
 	autocmd FileType python set shiftwidth=8
 augroup END
