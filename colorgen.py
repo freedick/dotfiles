@@ -8,5 +8,5 @@ def myhash(s):
 color = (myhash(argv[1]))%16
 color_upper = int(color/8)
 color_lower = int(color%8)
-stdout.write("\033[%d;3%dm"%(color_upper,color_lower))
+stdout.write("\033[%d;3%dm%s"%(color_upper,color_lower,argv[1]))
 
