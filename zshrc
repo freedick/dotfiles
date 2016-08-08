@@ -15,9 +15,6 @@ export EDITOR=vim
 function get_pwd() {
 	echo "${PWD/$HOME/~}"
 }
-function get_time() {
-	echo `date +%2H:%2M`
-}
 function get_ps1() {
 	echo "$USER@%m:$(get_pwd)"
 }
@@ -28,7 +25,7 @@ function precmd() {
 #echo -n "
 PS1="%{$fg_bold[red]%}$USER%{$reset_color%}@%{$(python ~/dotfiles/colorgen.py $(hostname))%}%{$reset_color%}:%{$fg_bold[magenta]%}$(get_pwd)%{$reset_color%}
 "
-PS2="%{$fg[red]%}$(get_time)"
+PS2="%{$fg[red]%}%D{%H:%M}"
 PS3="%{$fg_bold[magenta]%}> %{$reset_color%}"
 PROMPT="$PS1$PS2$PS3"
 }
@@ -40,3 +37,11 @@ bindkey '^[[7~' beginning-of-line
 bindkey '^[[8~' end-of-line
 
 alias jme=". /usr/local/jmonkeyplatform/bin/jmonkeyplatform --jdkhome /opt/oracle-jdk-bin-1.8.0.74"
+
+#Auto update time and battery life
+
+TMOUT=60
+
+TRAPALRM() {
+    zle reset-prompt
+}
