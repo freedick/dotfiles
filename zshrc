@@ -37,7 +37,7 @@ bindkey '^[[7~' beginning-of-line
 bindkey '^[[8~' end-of-line
 
 alias jme=". /usr/local/jmonkeyplatform/bin/jmonkeyplatform --jdkhome /opt/oracle-jdk-bin-1.8.0.74"
-
+alias emerge-world="sudo emerge --sync && sudo emerge --update --deep --newuse @world"
 #Auto update time and battery life
 
 TMOUT=60
