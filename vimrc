@@ -235,6 +235,10 @@ imap <f12> <esc>:tabn<esc>
 imap <f11> <esc>:tabp<esc>
 map <f12> :tabn<esc>
 map <f11> :tabp<esc>
+imap <c-f12> <esc>:tabm +<esc>
+imap <c-f11> <esc>:tabm -<esc>
+map <c-f12> :tabm +<esc>
+map <c-f11> :tabm -<esc>
 set tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
 augroup python_files
 	autocmd!
