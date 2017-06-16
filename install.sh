@@ -12,6 +12,8 @@ for i; do
           shift ;;
     --novim  ) vimfiles=""
           shift ;;
+    --noother ) otherfiles=""
+          shift ;;
     --help  ) echo $helptext; exit ;;
   esac
 done
