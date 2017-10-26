@@ -242,9 +242,9 @@ map <c-f11> :tabm -<esc>
 set tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
 augroup python_files
 	autocmd!
-	autocmd FileType python setlocal noexpandtab
-	autocmd FileType python set noexpandtab
-	autocmd FileType python set tabstop=8
-	autocmd FileType python set shiftwidth=8
+	autocmd FileType python setlocal expandtab
+	autocmd FileType python set expandtab
+	autocmd FileType python set tabstop=4
+	autocmd FileType python set shiftwidth=4
 augroup END
 "command Suw 'w !sudo dd of=%
