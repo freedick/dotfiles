@@ -247,4 +247,6 @@ augroup python_files
 	autocmd FileType python set tabstop=4
 	autocmd FileType python set shiftwidth=4
 augroup END
+set number
+set relativenumber
 "command Suw 'w !sudo dd of=%
