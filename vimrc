@@ -25,6 +25,19 @@ set ruler               " Show the cursor position all the time
 
 set viminfo='20,\"500   " Keep a .viminfo file.
 
+"Ycm
+
+noremap <c-g> :YcmCompleter GoToDefinition<esc>
+let g:ycm_key_list_select_completion = ['<Tab>']
+let g:ycm_key_list_previous_completion = ['<S-Tab>']
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -205,7 +218,9 @@ colors zenburn
 call pathogen#infect()
 
 map e :CtrlP <Esc>
+
 command Suw w !sudo tee %
+
 " map r map <ctrl-
 
 map <c-s> <c-w>
@@ -239,7 +254,16 @@ imap <c-f12> <esc>:tabm +<esc>
 imap <c-f11> <esc>:tabm -<esc>
 map <c-f12> :tabm +<esc>
 map <c-f11> :tabm -<esc>
-set tabstop=8 softtabstop=0 noexpandtab shiftwidth=8
+
+
+imap <s-f12> <esc>:tabp<esc>
+map <s-f12> :tabp<esc>
+imap <c-s-f12> <esc>:tabm -<esc>
+map <c-s-f12> :tabm -<esc>
+
+
+
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4
 augroup python_files
 	autocmd!
 	autocmd FileType python setlocal expandtab
